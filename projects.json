@@ -1,0 +1,33 @@
+[
+  {
+    "id": "echo-chamber",
+    "title": "Echo Chamber",
+    "shortDescription": "A first-person puzzle game built in 48 hours for Ludum Dare 54.",
+    "fullDescription": "Echo Chamber is a first-person puzzle game where sound is both your weapon and your obstacle. Built solo during Ludum Dare 54 (theme: 'Limited Space'), every room evolves based on the audio you generate. Features procedural room-state logic, custom FMOD integration, and a hand-crafted shader for the echo-visualisation effect.",
+    "thumbnail": "media/placeholder.png",
+    "media": [
+      "media/placeholder.png",
+      "media/placeholder.gif",
+      "media/placeholder.png"
+    ],
+    "tags": ["Ludum Dare", "Puzzle", "Unity"],
+    "tools": ["Unity", "C#", "FMOD", "HLSL"],
+    "link": "#",
+    "featured": true
+  },
+  {
+    "id": "drift-protocol",
+    "title": "Drift Protocol",
+    "shortDescription": "Arcade space-shooter with physics-based movement and procedural enemy waves.",
+    "fullDescription": "Drift Protocol is an arcade space-shooter that replaces conventional thrust controls with a physics-driven drift system — inertia is the primary challenge. The game features procedurally generated enemy wave patterns, a combo-multiplier system tied to risk proximity, and a global leaderboard backed by a lightweight serverless function.",
+    "thumbnail": "media/placeholder.png",
+    "media": [
+      "media/placeholder.gif",
+      "media/placeholder.png"
+    ],
+    "tags": ["Arcade", "Shooter", "Gameplay"],
+    "tools": ["Unity", "C#", "AWS Lambda"],
+    "link": "#",
+    "featured": true
+  }
+]

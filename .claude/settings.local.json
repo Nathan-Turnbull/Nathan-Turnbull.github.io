@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e \"console.log\\(''ok''\\)\")",
+      "Bash(powershell.exe -Command \"Get-Command node, python, python3, magick, ffmpeg -ErrorAction SilentlyContinue | Select-Object Name, Source\")",
+      "Bash(powershell.exe -Command \":*)",
+      "WebFetch(domain:simpleicons.org)",
+      "WebFetch(domain:cdn.simpleicons.org)",
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:cdn.jsdelivr.net)",
+      "WebFetch(domain:unpkg.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "mcp__Claude_Preview__preview_start"
+    ]
+  }
+}
