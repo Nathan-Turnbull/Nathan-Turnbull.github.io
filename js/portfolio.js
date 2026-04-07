@@ -97,7 +97,10 @@ function openModal(id) {
 
   // text
   modalTitle.textContent = p.title;
-  modalDesc.textContent  = p.fullDescription;
+  modalDesc.innerHTML    = p.fullDescription
+    .split('\n\n')
+    .map(chunk => `<p>${chunk}</p>`)
+    .join('');
   modalTags.innerHTML    = p.tags.map(t => `<span class="tag-pill">${t}</span>`).join('');
   modalTools.innerHTML   = p.tools.map(t => `<span class="tool-chip">${t}</span>`).join('');
 

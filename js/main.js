@@ -1,3 +1,9 @@
+// ─── Social footer links (sourced from config.js) ────────────────────────
+document.querySelectorAll('.footer-icon[aria-label="GitHub"]')
+  .forEach(a => a.href = SITE_CONFIG.social.github);
+document.querySelectorAll('.footer-icon[aria-label="LinkedIn"]')
+  .forEach(a => a.href = SITE_CONFIG.social.linkedin);
+
 // ─── Active nav link ─────────────────────────────────────────────────────
 (function () {
   const path = location.pathname.split('/').pop() || 'index.html';
