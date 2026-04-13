@@ -37,6 +37,30 @@ if (featuredGrid) {
     });
 }
 
+// ─── Certifications (home page only) ─────────────────────────────────────
+const certsGrid = document.getElementById('certs-grid');
+if (certsGrid) {
+  const CERTS_URL = new URL('certifications.json', location.href).href;
+  fetch(CERTS_URL)
+    .then(r => {
+      if (!r.ok) throw new Error(`HTTP ${r.status} fetching ${CERTS_URL}`);
+      return r.json();
+    })
+    .then(certs => {
+      if (!certs.length) return;
+      // Strip <script> tags from embed strings — we load embed.js once below
+      certsGrid.innerHTML = certs
+        .map(c => c.embed.replace(/<script[\s\S]*?<\/script>/gi, ''))
+        .join('');
+      // Load Credly embed.js once so it processes all badge divs
+      const s = document.createElement('script');
+      s.src   = '//cdn.credly.com/assets/utilities/embed.js';
+      s.async = true;
+      document.body.appendChild(s);
+    })
+    .catch(err => console.error('[main] Failed to load certifications.json:', err));
+}
+
 function cardHTML(p, isHome) {
   const tags = p.tags.map(t => `<span class="tag-pill">${t}</span>`).join('');
   return `

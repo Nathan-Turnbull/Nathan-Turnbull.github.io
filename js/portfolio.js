@@ -7,7 +7,8 @@ let currentMedia = [];
 const grid       = document.getElementById('project-grid');
 const filterBar  = document.getElementById('filter-bar');
 const overlay    = document.getElementById('modal-overlay');
-const modalImg   = document.getElementById('modal-img');
+const modalImg    = document.getElementById('modal-img');
+const modalIframe = document.getElementById('modal-iframe');
 const modalPrev  = document.getElementById('modal-prev');
 const modalNext  = document.getElementById('modal-next');
 const modalCount = document.getElementById('modal-count');
@@ -119,13 +120,32 @@ function openModal(id) {
 function closeModal() {
   overlay.classList.remove('open');
   document.body.style.overflow = '';
+  modalIframe.src = '';
   history.replaceState(null, '', location.pathname);
 }
 
 // ─── Slideshow ────────────────────────────────────────────────────────────
+function extractYouTubeId(url) {
+  const m = url.match(/(?:v=|youtu\.be\/|embed\/)([A-Za-z0-9_-]{11})/);
+  return m ? m[1] : '';
+}
+
 function updateSlide() {
   if (!currentMedia.length) return;
-  modalImg.src = currentMedia[currentSlide];
+  const item = currentMedia[currentSlide];
+  const isYT = typeof item === 'object' && item.type === 'youtube';
+
+  if (isYT) {
+    modalIframe.src = `https://www.youtube.com/embed/${extractYouTubeId(item.url)}?rel=0`;
+    modalIframe.style.display = 'block';
+    modalImg.style.display    = 'none';
+  } else {
+    modalIframe.src           = '';
+    modalImg.src              = typeof item === 'string' ? item : item.url;
+    modalImg.style.display    = 'block';
+    modalIframe.style.display = 'none';
+  }
+
   modalCount.textContent = `${currentSlide + 1} / ${currentMedia.length}`;
 }
 
