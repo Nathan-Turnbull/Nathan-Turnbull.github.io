@@ -401,9 +401,45 @@ button { cursor: pointer; font-family: inherit; }
 /* ─── Certifications ────────────────────────────────────────────────────── */
 .certs-grid {
   display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 20px;
+  align-items: stretch;
+}
+.cert-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  padding: 28px 20px 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) + 2px);
+  transition: border-color 0.2s, background 0.2s;
+  text-decoration: none;
+}
+.cert-card:hover {
+  border-color: var(--accent);
+  background: var(--surface-hover);
+}
+.cert-badge-img {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.cert-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.45;
+  margin-top: 16px;
+  flex: 1;
+}
+.cert-issuer {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 8px;
 }
 
 /* ─── Footer ────────────────────────────────────────────────────────────── */

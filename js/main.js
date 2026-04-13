@@ -47,18 +47,14 @@ if (certsGrid) {
       return r.json();
     })
     .then(certs => {
-      if (!certs.length) return;
-      // Strip <script> tags from embed strings — we load embed.js once below
-      certsGrid.innerHTML = certs
-        .map(c => c.embed.replace(/<script[\s\S]*?<\/script>/gi, ''))
-        .join('');
-      // Load Credly embed.js once so it processes all badge divs
-      const s = document.createElement('script');
-      s.src   = '//cdn.credly.com/assets/utilities/embed.js';
-      s.async = true;
-      document.body.appendChild(s);
+      certsGrid.innerHTML = certs.map(c => `
+        <a class="cert-card" href="${c.url}" target="_blank" rel="noopener">
+          <img class="cert-badge-img" src="${c.image}" alt="${c.name}" loading="lazy">
+          <span class="cert-name">${c.name}</span>
+          <span class="cert-issuer">${c.issuer}</span>
+        </a>`).join('');
     })
-    .catch(err => console.error('[main] Failed to load certifications.json:', err));
+    .catch(err => console.error('[main] Failed to load certifications:', err));
 }
 
 function cardHTML(p, isHome) {

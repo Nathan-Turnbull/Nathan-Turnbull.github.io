@@ -1,14 +1,32 @@
 [
   {
-    "embed": "<div data-iframe-width=\"150\" data-iframe-height=\"270\" data-share-badge-id=\"c8d3eec1-5701-4aaa-94ef-15b393cd3eeb\" data-share-badge-host=\"https://www.credly.com\"></div>"
+    "image": "media/badges/unity-programmer.png",
+    "name": "Unity Certified User: Programmer",
+    "issuer": "Unity Technologies",
+    "url": "https://www.credly.com/badges/c8d3eec1-5701-4aaa-94ef-15b393cd3eeb"
   },
   {
-    "embed": "<div data-iframe-width=\"150\" data-iframe-height=\"270\" data-share-badge-id=\"d665aeb2-070b-4391-b97e-6fcc570ac1d4\" data-share-badge-host=\"https://www.credly.com\"></div>"
+    "image": "media/badges/adobe-video-design.png",
+    "name": "Adobe Certified Professional in Video Design",
+    "issuer": "Adobe",
+    "url": "https://www.credly.com/badges/d665aeb2-070b-4391-b97e-6fcc570ac1d4"
   },
   {
-    "embed": "<div data-iframe-width=\"150\" data-iframe-height=\"270\" data-share-badge-id=\"9667f1d9-9d6d-4546-8fa8-ac13c137e316\" data-share-badge-host=\"https://www.credly.com\"></div>"
+    "image": "media/badges/adobe-photoshop.png",
+    "name": "Adobe Certified Professional in Visual Design Using Adobe Photoshop",
+    "issuer": "Adobe",
+    "url": "https://www.credly.com/badges/ff54d3dd-0f68-497b-bb41-7258bf7d9572"
   },
   {
-    "embed": "<div data-iframe-width=\"150\" data-iframe-height=\"270\" data-share-badge-id=\"your-badge-id-here\" data-share-badge-host=\"https://www.credly.com\"></div>"
+    "image": "media/badges/adobe-premiere-pro.png",
+    "name": "Adobe Certified Professional in Digital Video Using Adobe Premiere",
+    "issuer": "Adobe",
+    "url": "https://www.credly.com/badges/c1216624-b91f-43d2-b4e7-4361eb3a1e03"
+  },
+  {
+    "image": "media/badges/pmi-project-management.png",
+    "name": "PMI Project Management Ready™",
+    "issuer": "Project Management Institute",
+    "url": "https://www.credly.com/badges/9667f1d9-9d6d-4546-8fa8-ac13c137e316"
   }
 ]
