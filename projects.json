@@ -25,13 +25,13 @@
   },
   {
   "id": "signal-lost",
-  "title": "Signal Lost [In Development]",
+  "title": "Signal Lost [Demo]",
   "shortDescription": "A VR escape room built in Unity 6 with a gestural multi-interaction system designed to keep players immersed and comfortable throughout.",
-  "fullDescription": "Signal Lost is a VR escape room currently in development, built around a multi-interaction system where players can grab objects directly or flip their hand to switch into a ray-cast mode. The gestural mode switch means players are never broken out to a button or menu, and the force-pull specifically solves a core VR immersion problem: objects are never frustratingly out of reach due to real-world physical constraints.\n\nInformation lives on physical objects, and audio and lighting function as mechanics rather than atmosphere. Puzzles are mechanically distinct and solvable in any order with no handholding. Players observe, experiment, and figure it out.\n\nThe project demonstrates end-to-end ownership of a coherent VR system, a strong instinct for player feel, and the ability to design interactions that keep players present, comfortable, and engaged throughout.",
+  "fullDescription": "Signal Lost is a VR escape room built in Unity 6, targeting Meta Quest. With the multi-interaction system players can grab objects directly or flip their hand to switch into a ray-cast mode. The gestural mode switch means players are never broken out to a button or menu, and the force-pull means physical reach is never a barrier to immersion.\n\nInformation lives on physical objects. Audio and lighting function as mechanics. Puzzles are mechanically distinct and solvable in any order with no handholding.\n\nHighlight: I built a fully modular Morse code system that encodes and plays back any word, sentence, or number correctly.\n\nA functional demo is complete with two puzzles, a full interaction system, and an ending sequence",
   "thumbnail": "media/signallost/SignalLostCover.png",
-  "media": ["media/signallost/SignalLostCover.png"],
+  "media": ["media/signallost/SignalLostCover.png", { "type": "youtube", "url": "https://youtu.be/G7-jsrPHIso" }],
   "tags": ["gameplay", "VR", "Unity", "puzzle"],
-  "tools": ["Unity 6", "C#", "XR Interaction Toolkit"],
+  "tools": ["Unity 6", "C#", "XRI Toolkit", "Blender"],
   "link": "https://www.linkedin.com/posts/nathan-turnbull-9a332226b_gamedev-vr-unity-ugcPost-7444816733091020800-jvIF?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEITyQsBzCStHOLK1OwAZqd43C0PxGf2vDs",
   "featured": true
   }
